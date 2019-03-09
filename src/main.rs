@@ -2,8 +2,8 @@ mod mystruct;
 use mystruct::MyStruct;
 
 fn main() {
-    let name = "hoge";
+    let name = String::from("hoge");
     let age = 8;
-    let _m = MyStruct::new(name, age);
-    println!("Hello, world!");
+    let m = MyStruct::new(&name, age);
+    println!("Hello, {}", m);
 }
